@@ -13,6 +13,7 @@ a tracking application recovery of students by their parents using a QR Codes
 ## requirements
 
 - Java SE Development Kit 17.0.2 : Standard Edition Development Kit (JDK™). The JDK is a development environment for building applications and components using the Java programming languag
+- intellij idea IDE
 
 ## excution dans intellij :
 - Open edit configurations ![44](https://user-images.githubusercontent.com/44775252/158087179-9ad612a6-bfaf-4fb8-813f-73b3eaa67e9e.PNG)
