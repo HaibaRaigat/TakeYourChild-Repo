@@ -1,4 +1,4 @@
-# TakeYourChild-QR VERSION 0.3
+# TakeYourChild-QR V-0.3
 a tracking application recovery of students by their parents using a QR Codes
 
 
