@@ -1,4 +1,4 @@
-# TakeYourChild-Repo
+# TakeYourChild-QR VERSION 0.3
 a tracking application recovery of students by their parents using a QR Codes
 
 
