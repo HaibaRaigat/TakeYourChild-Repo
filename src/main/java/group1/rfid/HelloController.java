@@ -11,8 +11,10 @@ import javafx.geometry.Side;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.chart.PieChart;
+import javafx.scene.chart.*;
+import javafx.scene.chart.XYChart.Series;
 import javafx.scene.control.Label;
+import javafx.scene.control.ProgressIndicator;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseDragEvent;
 import javafx.scene.input.MouseEvent;
@@ -24,15 +26,24 @@ import javafx.stage.StageStyle;
 
 import java.io.IOException;
 import java.net.URL;
-import java.util.ResourceBundle;
-import java.util.Timer;
-import java.util.TimerTask;
+import java.util.*;
 
 public class HelloController implements Initializable {
     @FXML
     private ImageView dash;
+    @FXML
+    private ProgressIndicator prog1;
+    @FXML
+    private Label lab1;
+//////////////////////////////////////initialize bar chart  //
+    @FXML
+    private BarChart<String,Number> barchart;
+    @FXML
+    private CategoryAxis x;
+    @FXML
+    private NumberAxis y;
 
-
+/////////////////////////////////////////////////////////
 
     @FXML
     private ImageView dashcolor;
@@ -160,6 +171,10 @@ public class HelloController implements Initializable {
         menu2.setVisible(true);
         menu.setVisible(false);
 
+
+
+
+
     }
 
     @FXML
@@ -187,9 +202,10 @@ public class HelloController implements Initializable {
     void over(MouseDragEvent event) {
 
     }
-
+    private SortedMap<String, Integer> _points;
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
+
     }
-}
+    }
