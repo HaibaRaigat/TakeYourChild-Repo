@@ -15,10 +15,13 @@ import javafx.scene.chart.*;
 import javafx.scene.chart.XYChart.Series;
 import javafx.scene.control.Label;
 import javafx.scene.control.ProgressIndicator;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseDragEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
+import javafx.scene.paint.ImagePattern;
+import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
@@ -29,6 +32,28 @@ import java.net.URL;
 import java.util.*;
 
 public class HelloController implements Initializable {
+    @FXML
+    private Label labdash1;
+
+    @FXML
+    private Label labdash2;
+
+    @FXML
+    private Label labdash3;
+
+    @FXML
+    private Label labdash4;
+    @FXML
+    private Circle recdash1;
+
+    @FXML
+    private Circle recdash2;
+
+    @FXML
+    private Circle recdash3;
+
+    @FXML
+    private Circle recdash4;
     @FXML
     private ImageView dash;
     @FXML
@@ -45,6 +70,14 @@ public class HelloController implements Initializable {
 
 /////////////////////////////////////////////////////////
 
+    Image image1 = new Image(getClass().getResourceAsStream("/imgeskidsparent/2.jpg"));
+    Image image2 = new Image(getClass().getResourceAsStream("/imgeskidsparent/3.jpg"));
+    Image image3 = new Image(getClass().getResourceAsStream("/imgeskidsparent/6.jpg"));
+    Image image4 = new Image(getClass().getResourceAsStream("/imgeskidsparent/8.jpg"));
+
+
+    @FXML
+    private Label refresh;
     @FXML
     private ImageView dashcolor;
 
@@ -202,10 +235,37 @@ public class HelloController implements Initializable {
     void over(MouseDragEvent event) {
 
     }
+
+    public void reclab1(){
+        recdash1.setFill(new ImagePattern(image1));
+        labdash1.setText("Saad Alian");
+    }
+    public void reclab2(){
+        recdash1.setFill(new ImagePattern(image2));
+        labdash1.setText("Ahmad Crmef");
+    }
+    public void reclab3(){
+        recdash1.setFill(new ImagePattern(image3));
+        labdash1.setText("Salma Rafik");
+    }
+    public void reclab4(){
+        recdash1.setFill(new ImagePattern(image4));
+        labdash1.setText("Ala Child");
+    }
     private SortedMap<String, Integer> _points;
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
+
+    }
+
+
+    @FXML
+    void refreshme(MouseEvent event) {
+reclab1();
+reclab2();
+reclab3();
+reclab4();
 
     }
     }
