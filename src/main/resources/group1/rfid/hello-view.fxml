@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
@@ -8,6 +9,7 @@
 <?import javafx.scene.paint.LinearGradient?>
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
@@ -25,7 +27,7 @@
             <Font size="23.0" />
          </font>
       </Label>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="333.0" layoutX="67.0" layoutY="245.0" stroke="TRANSPARENT" strokeType="INSIDE" style="-fx-arc-height: 22; -fx-arc-width: 22;" width="340.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="333.0" layoutX="65.0" layoutY="245.0" stroke="TRANSPARENT" strokeType="INSIDE" style="-fx-arc-height: 33; -fx-arc-width: 33;" width="362.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="137.0" layoutX="709.0" layoutY="222.0" stroke="TRANSPARENT" strokeType="INSIDE" style="-fx-arc-height: 22; -fx-arc-width: 22;" width="362.0" />
       <Pane layoutX="45.0" prefHeight="56.0" prefWidth="1053.0" style="-fx-background-color: #FFFFFF;">
          <children>
@@ -46,11 +48,36 @@
                   <Font size="17.0" />
                </font>
             </Label>
-            <ImageView fx:id="dash11" fitHeight="25.0" fitWidth="22.0" layoutX="859.0" layoutY="20.0" onMouseExited="#hide1" onMouseMoved="#hada" pickOnBounds="true" preserveRatio="true">
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ebe8e9" height="27.0" layoutX="269.0" layoutY="15.0" stroke="#061a6100" strokeType="INSIDE" style="-fx-arc-height: 22; -fx-arc-width: 22;" width="362.0" />
+            <ImageView fx:id="dash13" fitHeight="23.0" fitWidth="19.0" layoutX="276.0" layoutY="20.0" onMouseExited="#hide1" onMouseMoved="#hada" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@img/icons8_notification_50px_1.png" />
+                  <Image url="@img/icons8_search_50px_1.png" />
                </image>
             </ImageView>
+            <TextField layoutX="299.0" layoutY="16.0" prefHeight="25.0" prefWidth="275.0" style="-fx-background-color: #EBE8E9;" text="Search Something..." />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="24.0" layoutX="762.0" layoutY="16.0" stroke="TRANSPARENT" strokeType="INSIDE" style="-fx-arc-height: 14; -fx-arc-width: 14;" width="87.0">
+               <fill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.01640000008046627" green="0.29968345165252686" blue="0.8199999928474426" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.45370370149612427" green="0.6995370388031006" blue="1.0" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Rectangle>
+            <Label fx:id="refresh" layoutX="771.0" layoutY="15.0" onMouseClicked="#refreshme" text="Actualiser" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
          </children></Pane>
       <Pane prefHeight="591.0" prefWidth="46.0" style="-fx-background-color: #2E35EA;">
          <children>
@@ -222,7 +249,7 @@
             <Image url="@img/icons8_time_machine_100px.png" />
          </image>
       </ImageView>
-      <Label layoutX="747.0" layoutY="125.0" text="03" textFill="WHITE">
+      <Label layoutX="747.0" layoutY="125.0" text="14" textFill="WHITE">
          <font>
             <Font name="Century Gothic" size="28.0" />
          </font>
@@ -239,7 +266,7 @@
       </Label>
       <ImageView fx:id="kids122" fitHeight="12.0" fitWidth="12.0" layoutX="823.0" layoutY="106.0" onMouseExited="#hide3" onMouseMoved="#show2" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@img/icons8_user_50px.png" />
+            <Image url="@img/icons8_female_user_50px.png" />
          </image>
       </ImageView>
       <ImageView fx:id="kids123" fitHeight="12.0" fitWidth="12.0" layoutX="906.0" layoutY="106.0" onMouseExited="#hide3" onMouseMoved="#show2" pickOnBounds="true" preserveRatio="true">
@@ -262,17 +289,17 @@
             <Image url="@img/icons8_boy_50px.png" />
          </image>
       </ImageView>
-      <Label layoutX="831.0" layoutY="125.0" text="06" textFill="WHITE">
+      <Label layoutX="831.0" layoutY="125.0" text="20" textFill="WHITE">
          <font>
             <Font name="Century Gothic" size="28.0" />
          </font>
       </Label>
-      <Label layoutX="920.0" layoutY="125.0" text="02" textFill="WHITE">
+      <Label layoutX="920.0" layoutY="125.0" text="17" textFill="WHITE">
          <font>
             <Font name="Century Gothic" size="28.0" />
          </font>
       </Label>
-      <Label layoutX="1005.0" layoutY="125.0" text="04" textFill="WHITE">
+      <Label layoutX="1005.0" layoutY="125.0" text="22" textFill="WHITE">
          <font>
             <Font name="Century Gothic" size="28.0" />
          </font>
@@ -292,6 +319,281 @@
             <Image url="@img/50426%20%5BConverti%5D.png" />
          </image>
       </ImageView>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="333.0" layoutX="426.0" layoutY="245.0" stroke="TRANSPARENT" strokeType="INSIDE" style="-fx-arc-height: 22; -fx-arc-width: 22;" width="270.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="333.0" layoutX="443.0" layoutY="245.0" stroke="TRANSPARENT" strokeType="INSIDE" style="-fx-arc-height: 22; -fx-arc-width: 22;" width="253.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="204.0" layoutX="96.0" layoutY="358.0" stroke="TRANSPARENT" strokeType="INSIDE" style="-fx-arc-height: 22; -fx-arc-width: 22;" width="22.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.9078947305679321" green="0.9078947305679321" blue="0.42452484369277954" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.6710526347160339" green="0.6177205443382263" blue="0.031067252159118652" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="101.0" layoutX="143.0" layoutY="461.0" stroke="TRANSPARENT" strokeType="INSIDE" style="-fx-arc-height: 22; -fx-arc-width: 22;" width="22.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.5252143740653992" green="0.6100000143051147" blue="0.09759999811649323" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.007662835249042145">
+                     <color>
+                        <Color red="0.9473684430122375" green="0.2719298303127289" blue="0.688450276851654" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.8552631735801697" green="0.03563596308231354" blue="0.4181286692619324" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="187.0" layoutX="188.0" layoutY="375.0" stroke="TRANSPARENT" strokeType="INSIDE" style="-fx-arc-height: 22; -fx-arc-width: 22;" width="22.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.9372549057006836" green="0.2705882489681244" blue="0.9490196108818054" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.41960784792900085" green="0.11372549086809158" blue="0.6705882549285889" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="229.0" layoutX="235.0" layoutY="333.0" stroke="TRANSPARENT" strokeType="INSIDE" style="-fx-arc-height: 22; -fx-arc-width: 22;" width="22.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.40789473056793213" green="0.9473684430122375" blue="0.8574561476707458" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.09759999811649323" green="0.3888201415538788" blue="0.6100000143051147" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <Label layoutX="97.0" layoutY="321.0" text="12" textFill="#151b90">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="144.0" layoutY="423.0" text="4" textFill="#151b90">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="189.0" layoutY="345.0" text="10" textFill="#151b90">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="236.0" layoutY="303.0" text="13" textFill="#151b90">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#57515115" height="162.0" layoutX="281.0" layoutY="332.0" stroke="TRANSPARENT" strokeType="INSIDE" style="-fx-arc-height: 33; -fx-arc-width: 33;" width="133.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="15.0" layoutX="299.0" layoutY="354.0" stroke="TRANSPARENT" strokeType="INSIDE" style="-fx-arc-height: 15; -fx-arc-width: 15;" width="15.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.40789473056793213" green="0.9473684430122375" blue="0.8574561476707458" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.09759999811649323" green="0.3888201415538788" blue="0.6100000143051147" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <Label layoutX="320.0" layoutY="352.0" text="Petit Section" textFill="#151b90">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="320.0" layoutY="386.0" text="Moy Section" textFill="#151b90">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="320.0" layoutY="422.0" text="Gran Section" textFill="#151b90">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="320.0" layoutY="452.0" text="CP" textFill="#151b90">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="15.0" layoutX="299.0" layoutY="388.0" stroke="TRANSPARENT" strokeType="INSIDE" style="-fx-arc-height: 15; -fx-arc-width: 15;" width="15.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.9300000071525574" green="0.4092000126838684" blue="0.8026100993156433" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.007662835249042145">
+                     <color>
+                        <Color red="0.9300000071525574" green="0.4092000126838684" blue="0.8026100993156433" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.41960784792900085" green="0.11372549086809158" blue="0.6705882549285889" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="15.0" layoutX="299.0" layoutY="424.0" stroke="TRANSPARENT" strokeType="INSIDE" style="-fx-arc-height: 15; -fx-arc-width: 15;" width="15.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.9399999976158142" green="0.41359999775886536" blue="0.6521841883659363" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.8421052694320679" green="0.011695906519889832" blue="0.34385964274406433" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="15.0" layoutX="299.0" layoutY="454.0" stroke="TRANSPARENT" strokeType="INSIDE" style="-fx-arc-height: 15; -fx-arc-width: 15;" width="15.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.8947368264198303" green="0.8947368264198303" blue="0.2858187258243561" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.7631579041481018" green="0.7631579041481018" blue="0.03179824724793434" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <Label layoutX="523.0" layoutY="254.0" text="Fil d'attente" textFill="#151b90">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Circle fx:id="recdash1" fill="DODGERBLUE" layoutX="492.0" layoutY="343.0" radius="22.0" stroke="BLACK" strokeType="INSIDE" style="visibility: false;" />
+      <Circle fx:id="recdash2" fill="DODGERBLUE" layoutX="492.0" layoutY="402.0" radius="22.0" stroke="BLACK" strokeType="INSIDE" style="visibility: false;" />
+      <Circle fx:id="recdash3" fill="DODGERBLUE" layoutX="492.0" layoutY="462.0" radius="22.0" stroke="BLACK" strokeType="INSIDE" style="visibility: false;" />
+      <Circle fx:id="recdash4" fill="DODGERBLUE" layoutX="492.0" layoutY="523.0" radius="22.0" stroke="BLACK" strokeType="INSIDE" style="visibility: false;" />
+      <Label fx:id="labdash1" layoutX="529.0" layoutY="327.0" style="visibility: false;" text="Mark Lee" textFill="#3c3c3c">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="labdash2" layoutX="529.0" layoutY="387.0" style="visibility: false;" text="Mark Lee" textFill="#3c3c3c">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="labdash3" layoutX="529.0" layoutY="444.0" style="visibility: false;" text="Mark Lee" textFill="#3c3c3c">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="labdash4" layoutX="529.0" layoutY="508.0" style="visibility: false;" text="Mark Lee" textFill="#3c3c3c">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Line endX="108.0" layoutX="570.0" layoutY="372.0" startX="-100.0" stroke="#464343" strokeWidth="0.4" />
+      <Line endX="108.0" layoutX="571.0" layoutY="431.0" startX="-100.0" stroke="#464343" strokeWidth="0.4" />
+      <Line endX="108.0" layoutX="571.0" layoutY="494.0" startX="-100.0" stroke="#464343" strokeWidth="0.4" />
+      <Label layoutX="879.0" layoutY="273.0" text="TakeYourChild" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="1006.0" layoutY="303.0" text="3.0" textFill="WHITE">
+         <font>
+            <Font name="Century Gothic" size="19.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="124.0" fitWidth="93.0" layoutX="947.0" layoutY="410.0" pickOnBounds="true" preserveRatio="true" rotate="12.5">
+         <image>
+            <Image url="@../../img/CARD1.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="130.0" fitWidth="94.0" layoutX="891.0" layoutY="404.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../img/CARD2.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="742.0" layoutY="444.0" text="Card Builder" textFill="#151b90">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="27.0" layoutX="746.0" layoutY="488.0" stroke="TRANSPARENT" strokeType="INSIDE" style="-fx-arc-height: 30; -fx-arc-width: 30;" width="123.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.01640000008046627" green="0.29968345165252686" blue="0.8199999928474426" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.45370370149612427" green="0.6995370388031006" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <Label layoutX="783.0" layoutY="487.0" text="Create" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
    </children>
 </Pane>

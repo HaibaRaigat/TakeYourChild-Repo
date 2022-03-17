@@ -92,6 +92,11 @@
                   <Image url="@img/icons8_qr_code_70px.png" />
                </image>
             </ImageView>
+            <Label fx:id="test2" layoutX="282.0" layoutY="48.0" text="G1 QR Scanner v0.1" textFill="#2e35ea">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Label>
          </children>
       </Pane>
    </children>
