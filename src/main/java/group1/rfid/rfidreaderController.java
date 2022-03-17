@@ -301,7 +301,6 @@ buzzer.play();
                 tv.toGreen();
                 tv.card1();
 
-
             }
 
             if(resultQR.getText().equals("13EC33VM88")) {
