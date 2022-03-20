@@ -3,7 +3,7 @@ a tracking application recovery of students by their parents using a QR Codes
 
 
 - Interface Dashboard
-![Capture](https://user-images.githubusercontent.com/44775252/158084927-b64ea8b2-f317-42f2-8014-9f296346f24d.PNG)
+![form1](https://user-images.githubusercontent.com/44775252/159167206-17d43a7f-0aad-43e8-9e0b-53afa41ac8d2.PNG)
 
 - QR TV ZONE
 ![2](https://user-images.githubusercontent.com/44775252/158085332-e915062f-57c1-42c9-8a0d-405ae19d1604.PNG)
