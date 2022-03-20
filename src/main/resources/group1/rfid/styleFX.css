@@ -1,0 +1,27 @@
+.data0.chart-bar{
+ -fx-background-color:linear-gradient(to bottom right, rgba(241, 32, 102), rgba(196, 0, 66));
+ -fx-width:6px;
+ -fx-background-radius:9px 9px 0px 0px;
+ }
+
+ .data1.chart-bar{
+ -fx-background-color:linear-gradient(to bottom right, rgba(13, 150, 234), rgba(0, 91, 147));
+
+ -fx-width:6px;
+ -fx-background-radius:9px 9px 0px 0px;
+ }
+ .data2.chart-bar{
+ -fx-background-color:linear-gradient(to bottom right, rgba(126, 23, 223), rgba(79, 4, 149));
+ -fx-width:15px;
+ -fx-background-radius:9px 9px 0px 0px;
+ }
+ .data3.chart-bar{
+ -fx-background-color:linear-gradient(to bottom right, rgba(248, 196, 34), rgba(218, 165, 0));
+ -fx-width:6px;
+ -fx-background-radius:9px 9px 0px 0px;
+ }
+
+.chart-bar{
+-fx-background-color:transparent;
+-fx-bar-fill:transparent;
+}
