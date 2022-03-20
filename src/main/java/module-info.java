@@ -12,6 +12,7 @@ module group1.rfid {
     requires javafx.media;
     requires com.google.zxing.javase;
     requires AbsoluteLayout.RELEASE126;
+    requires sentry;
 
 
     opens group1.rfid to javafx.fxml;
