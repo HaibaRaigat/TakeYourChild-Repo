@@ -1,5 +1,6 @@
 package group1.rfid;
 
+import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.EventHandler;
@@ -20,6 +21,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseDragEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
+import javafx.scene.paint.Color;
 import javafx.scene.paint.ImagePattern;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
@@ -31,13 +33,19 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.*;
 
+// sentry imports
+import io.sentry.Sentry;
+import java.lang.Exception;
+
 public class HelloController implements Initializable {
     @FXML
     private Label labdash1;
-
+    @FXML
+    private Pane elevepane;
     @FXML
     private Label labdash2;
-
+    @FXML
+    private ImageView exit;
     @FXML
     private Label labdash3;
 
@@ -255,11 +263,40 @@ public class HelloController implements Initializable {
     private SortedMap<String, Integer> _points;
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+      //sentryCheck();
+
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
+
+
+
+
+
+        Series series3 = new Series();
+        series3.setName("2005");
+        series3.getData().add(new XYChart.Data("la petit", 12));
+        series3.getData().add(new XYChart.Data("la Moyenne", 3));
+        series3.getData().add(new XYChart.Data("la Grande", 9));
+        series3.getData().add(new XYChart.Data("CP", 11));
+        barchart.getData().addAll(series3);
+
+
 
 
     }
 
 
+    public void sentryCheck(){
+        Sentry.init(options -> {
+            options.setDsn("https://ce6324f2898c4446ba667f22cd44ab2c@o1170705.ingest.sentry.io/6264459");
+            // Set tracesSampleRate to 1.0 to capture 100% of transactions for performance monitoring.
+            // We recommend adjusting this value in production.
+            options.setTracesSampleRate(1.0);
+            // When first trying Sentry it's good to see what the SDK is doing:
+            options.setDebug(true);
+        });
+
+
+    }
     @FXML
     void refreshme(MouseEvent event) {
 reclab1();
@@ -267,5 +304,22 @@ reclab2();
 reclab3();
 reclab4();
 
+    }
+
+    @FXML
+    void showpaneeleve(MouseEvent event) {
+elevepane.setVisible(true);
+    }
+
+
+    @FXML
+    void showdash(MouseEvent event) {
+        elevepane.setVisible(false);
+
+    }
+
+    @FXML
+    void exitme(MouseEvent event) {
+Platform.exit();
     }
     }
