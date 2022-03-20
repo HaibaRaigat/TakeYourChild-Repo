@@ -31,7 +31,7 @@
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="137.0" layoutX="709.0" layoutY="222.0" stroke="TRANSPARENT" strokeType="INSIDE" style="-fx-arc-height: 22; -fx-arc-width: 22;" width="362.0" />
       <Pane layoutX="45.0" prefHeight="56.0" prefWidth="1053.0" style="-fx-background-color: #FFFFFF;">
          <children>
-            <Label layoutX="41.0" layoutY="15.0" text="Dashboard" textFill="#151b90">
+            <Label layoutX="41.0" layoutY="15.0" text="Dashboardd" textFill="#151b90">
                <font>
                   <Font size="18.0" />
                </font>
@@ -596,6 +596,17 @@
          </fill>
       </Rectangle>
       <Label layoutX="783.0" layoutY="487.0" text="Create" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2e35ea" height="246.0" layoutX="246.0" layoutY="182.0" stroke="TRANSPARENT" strokeType="INSIDE" style="-fx-arc-height: 33; -fx-arc-width: 33;" width="582.0" />
+      <Label layoutX="428.0" layoutY="279.0" text="NOT FOUND 404 !!" textFill="WHITE">
+         <font>
+            <Font size="40.0" />
+         </font>
+      </Label>
+      <Label layoutX="341.0" layoutY="346.0" text="this fxml page not working do not modify or add any chanes plz " textFill="WHITE">
          <font>
             <Font size="18.0" />
          </font>
