@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: #EEEFF4;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="group1.rfid.tvController">
+   <children>
+      <Rectangle fx:id="RecAnim2" arcHeight="5.0" arcWidth="5.0" fill="#2e35ea" height="221.0" layoutX="787.0" layoutY="274.0" stroke="#2e35ea" strokeType="INSIDE" style="-fx-arc-height: 33; -fx-arc-width: 33;" width="37.0" />
+      <Rectangle fx:id="RecAnima1" arcHeight="5.0" arcWidth="5.0" fill="#2e35ea" height="221.0" layoutX="535.0" layoutY="274.0" stroke="#00a260" strokeType="INSIDE" style="-fx-arc-height: 33; -fx-arc-width: 33;" width="37.0" />
+      <Pane fx:id="navbar" onMouseClicked="#showImg" prefHeight="47.0" prefWidth="1399.0" style="-fx-background-color: #2E35EA;">
+         <children>
+            <Label layoutX="45.0" layoutY="9.0" text="RIFD TV ZONE" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="37.0" fitWidth="50.0" layoutX="6.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/icons8_tv_120px_3.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="close" fitHeight="44.0" fitWidth="30.0" layoutX="1331.0" layoutY="9.0" onMouseClicked="#closme" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/icons8_Logout_64px.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Rectangle fx:id="RecParent" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="318.0" layoutX="304.0" layoutY="225.0" stroke="#2e35ea" strokeType="INSIDE" strokeWidth="2.0" style="-fx-arc-height: 22; -fx-arc-width: 22;" width="258.0" />
+      <Rectangle fx:id="RecKids" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="318.0" layoutX="797.0" layoutY="225.0" stroke="#2e35ea" strokeType="INSIDE" strokeWidth="2.0" style="-fx-arc-height: 22; -fx-arc-width: 22;" width="258.0" />
+      <Rectangle fx:id="RecKids3" arcHeight="5.0" arcWidth="5.0" fill="#2e35ea" height="37.0" layoutX="797.0" layoutY="522.0" stroke="#2e35ea" strokeType="INSIDE" strokeWidth="2.0" style="-fx-arc-height: 22; -fx-arc-width: 22;" width="258.0" />
+      <Rectangle fx:id="RecKids2" arcHeight="5.0" arcWidth="5.0" fill="#2e35ea" height="26.0" layoutX="797.0" layoutY="519.0" stroke="#2e35ea" strokeType="INSIDE" strokeWidth="2.0" width="258.0" />
+      <Rectangle fx:id="RecParent3" arcHeight="5.0" arcWidth="5.0" fill="#2e35ea" height="37.0" layoutX="304.0" layoutY="522.0" stroke="#2e35ea" strokeType="INSIDE" strokeWidth="2.0" style="-fx-arc-height: 22; -fx-arc-width: 22;" width="258.0" />
+      <Rectangle fx:id="RecParent2" arcHeight="5.0" arcWidth="5.0" fill="#2e35ea" height="26.0" layoutX="304.0" layoutY="518.0" stroke="#2e35ea" strokeType="INSIDE" strokeWidth="2.0" width="258.0" />
+      <Circle fx:id="circleVer" fill="#eeeff4" layoutX="679.0" layoutY="379.0" radius="34.0" stroke="#2e35ea" strokeType="INSIDE" />
+      <Label fx:id="label1" layoutX="346.0" layoutY="526.0" prefHeight="20.0" prefWidth="177.0" text=".............." textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="label12" layoutX="838.0" layoutY="526.0" prefHeight="20.0" prefWidth="177.0" text=".............." textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="37.0" fitWidth="37.0" layoutX="660.0" layoutY="361.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/icons8_Check_Circle_60px_1.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="labelcard2" layoutX="831.0" layoutY="387.0" prefHeight="30.0" prefWidth="191.0" text="Waiting to read the card" textAlignment="CENTER" textFill="#2e35ea">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="imgcard2" fitHeight="57.0" fitWidth="54.0" layoutX="899.0" layoutY="335.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/icons8_card_payment_120px.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="labelcard1" layoutX="339.0" layoutY="385.0" prefHeight="30.0" prefWidth="191.0" text="Waiting to read the card" textAlignment="CENTER" textFill="#2e35ea">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="imgcard1" fitHeight="57.0" fitWidth="54.0" layoutX="408.0" layoutY="335.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/icons8_card_payment_120px.png" />
+         </image>
+      </ImageView>
+      <Rectangle fx:id="RecKids1" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="588.0" layoutX="1093.0" layoutY="117.0" stroke="#2e35ea" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-height: 22; -fx-arc-width: 22;" width="258.0" />
+      <Rectangle fx:id="recfill1" arcHeight="5.0" arcWidth="5.0" fill="#e6e7ea" height="54.0" layoutX="1104.0" layoutY="170.0" stroke="#2e35ea" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-height: 22; -fx-arc-width: 22; visibility: false;" width="236.0" />
+      <Rectangle fx:id="RecKids111" arcHeight="12.0" arcWidth="12.0" fill="#2e35ea" height="37.0" layoutX="1116.0" layoutY="99.0" stroke="#2e35ea" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-height: 40; -fx-arc-width: 40;" width="212.0" />
+      <Circle fx:id="circfill1" fill="#eeeff4" layoutX="1138.0" layoutY="197.0" radius="22.0" stroke="#2e35ea" strokeType="INSIDE" style="visibility: false;" />
+      <Rectangle fx:id="recfill2" arcHeight="5.0" arcWidth="5.0" fill="#e6e7ea" height="54.0" layoutX="1104.0" layoutY="243.0" stroke="#2e35ea" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-height: 22; -fx-arc-width: 22; visibility: false;" width="236.0" />
+      <Circle fx:id="circfill2" fill="#eeeff4" layoutX="1138.0" layoutY="270.0" radius="22.0" stroke="#2e35ea" strokeType="INSIDE" style="visibility: false;" />
+      <Rectangle fx:id="recfill3" arcHeight="5.0" arcWidth="5.0" fill="#e6e7ea" height="54.0" layoutX="1104.0" layoutY="315.0" stroke="#2e35ea" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-height: 22; -fx-arc-width: 22; visibility: false;" width="236.0" />
+      <Circle fx:id="circfill3" fill="#eeeff4" layoutX="1138.0" layoutY="342.0" radius="22.0" stroke="#2e35ea" strokeType="INSIDE" style="visibility: false;" />
+      <Rectangle fx:id="recfill4" arcHeight="5.0" arcWidth="5.0" fill="#e6e7ea" height="54.0" layoutX="1104.0" layoutY="388.0" stroke="#2e35ea" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-height: 22; -fx-arc-width: 22; visibility: false;" width="236.0" />
+      <Circle fx:id="circfill4" fill="#eeeff4" layoutX="1138.0" layoutY="415.0" radius="22.0" stroke="#2e35ea" strokeType="INSIDE" style="visibility: false;" />
+      <Label fx:id="labelcard21" layoutX="1175.0" layoutY="103.0" prefHeight="30.0" prefWidth="103.0" text="Fil D'attente" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Rectangle fx:id="RecKids12" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="588.0" layoutX="14.0" layoutY="117.0" stroke="#2e35ea" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-height: 22; -fx-arc-width: 22;" width="258.0" />
+      <Rectangle fx:id="RecKids1111" arcHeight="12.0" arcWidth="12.0" fill="#2e35ea" height="37.0" layoutX="37.0" layoutY="99.0" stroke="#2e35ea" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-height: 40; -fx-arc-width: 40;" width="212.0" />
+      <Label fx:id="labeldelivred" layoutX="107.0" layoutY="103.0" prefHeight="30.0" prefWidth="78.0" text="delivered" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelfill1" layoutX="1170.0" layoutY="182.0" prefHeight="30.0" prefWidth="148.0" style="visibility: false;" text="Fil D'attente" textAlignment="CENTER" textFill="#464545">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelfill2" layoutX="1170.0" layoutY="255.0" prefHeight="30.0" prefWidth="148.0" style="visibility: false;" text="Fil D'attente" textAlignment="CENTER" textFill="#464545">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelfill3" layoutX="1170.0" layoutY="329.0" prefHeight="30.0" prefWidth="148.0" style="visibility: false;" text="Fil D'attente" textAlignment="CENTER" textFill="#464545">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelfill4" layoutX="1169.0" layoutY="402.0" prefHeight="30.0" prefWidth="148.0" style="visibility: false;" text="Fil D'attente" textAlignment="CENTER" textFill="#464545">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelcard22" layoutX="630.0" layoutY="690.0" prefHeight="30.0" prefWidth="121.0" text="TakeYourChild" textAlignment="CENTER" textFill="#2e35ea">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelcard221" layoutX="727.0" layoutY="705.0" prefHeight="30.0" prefWidth="30.0" text="V0.1" textAlignment="CENTER" textFill="#2e35ea" />
+      <Rectangle fx:id="recdeliv" arcHeight="5.0" arcWidth="5.0" fill="#e6e7ea" height="54.0" layoutX="25.0" layoutY="155.0" stroke="#2e35ea" strokeType="INSIDE" strokeWidth="0.0" style="-fx-arc-height: 22; -fx-arc-width: 22; visibility: false;" width="236.0" />
+      <Circle fx:id="circledeliv" fill="#eeeff4" layoutX="59.0" layoutY="182.0" radius="22.0" stroke="#2e35ea" strokeType="INSIDE" style="visibility: false;" />
+      <Label fx:id="labeldeliv" layoutX="91.0" layoutY="167.0" prefHeight="30.0" prefWidth="148.0" style="visibility: false;" text="Fil D'attente" textAlignment="CENTER" textFill="#464545">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
