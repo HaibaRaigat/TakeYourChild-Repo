@@ -15,7 +15,7 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$USER_HOME$/Desktop/RFID CARDES/bridj-0.6.1-windows-only.jar/bridj-0.6.1-windows-only.jar!/" />
+          <root url="jar://$MODULE_DIR$/../RFID CARDES/bridj-0.6.1-windows-only.jar/bridj-0.6.1-windows-only.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -24,7 +24,7 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$USER_HOME$/Desktop/RFID CARDES/jar_files/AbsoluteLayout-RELEASE126.jar!/" />
+          <root url="jar://$MODULE_DIR$/../RFID CARDES/jar_files/AbsoluteLayout-RELEASE126.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -33,11 +33,11 @@
     <orderEntry type="library" name="javase-3.4.1" level="project" />
     <orderEntry type="library" name="AbsoluteLayout-RELEASE126" level="project" />
     <orderEntry type="library" name="Maven: org.openjfx:javafx-swing:17.0.2" level="project" />
-    <orderEntry type="library" name="Maven: org.openjfx:javafx-swing:linux:17.0.2" level="project" />
+    <orderEntry type="library" name="Maven: org.openjfx:javafx-swing:win:17.0.2" level="project" />
     <orderEntry type="library" name="Maven: org.openjfx:javafx-graphics:17.0.2" level="project" />
-    <orderEntry type="library" name="Maven: org.openjfx:javafx-graphics:linux:17.0.2" level="project" />
+    <orderEntry type="library" name="Maven: org.openjfx:javafx-graphics:win:17.0.2" level="project" />
     <orderEntry type="library" name="Maven: org.openjfx:javafx-base:17.0.2" level="project" />
-    <orderEntry type="library" name="Maven: org.openjfx:javafx-base:linux:17.0.2" level="project" />
+    <orderEntry type="library" name="Maven: org.openjfx:javafx-base:win:17.0.2" level="project" />
     <orderEntry type="library" name="Maven: com.google.zxing:core:3.4.1" level="project" />
     <orderEntry type="library" name="Maven: com.github.sarxos:webcam-capture:0.3.12" level="project" />
     <orderEntry type="library" name="Maven: com.nativelibs4java:bridj:0.7.0" level="project" />
@@ -46,7 +46,7 @@
     <orderEntry type="library" name="Maven: com.beust:jcommander:1.78" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Maven: com.github.jai-imageio:jai-imageio-core:1.4.0" level="project" />
     <orderEntry type="library" name="Maven: org.openjfx:javafx-media:11.0.2" level="project" />
-    <orderEntry type="library" name="Maven: org.openjfx:javafx-media:linux:11.0.2" level="project" />
+    <orderEntry type="library" name="Maven: org.openjfx:javafx-media:win:11.0.2" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.slf4j:slf4j-log4j12:1.7.7" level="project" />
     <orderEntry type="library" name="Maven: com.github.vaibhav-sinha:kong-java-client:0.2.0" level="project" />
     <orderEntry type="library" name="Maven: com.squareup.retrofit2:retrofit:2.3.0" level="project" />
@@ -57,14 +57,15 @@
     <orderEntry type="library" name="Maven: commons-logging:commons-logging-api:1.1" level="project" />
     <orderEntry type="library" name="Maven: log4j:log4j:1.2.17" level="project" />
     <orderEntry type="library" name="Maven: org.openjfx:javafx-controls:17.0.2" level="project" />
-    <orderEntry type="library" name="Maven: org.openjfx:javafx-controls:linux:17.0.2" level="project" />
+    <orderEntry type="library" name="Maven: org.openjfx:javafx-controls:win:17.0.2" level="project" />
     <orderEntry type="library" name="Maven: org.openjfx:javafx-fxml:17.0.2" level="project" />
-    <orderEntry type="library" name="Maven: org.openjfx:javafx-fxml:linux:17.0.2" level="project" />
+    <orderEntry type="library" name="Maven: org.openjfx:javafx-fxml:win:17.0.2" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.junit.jupiter:junit-jupiter-api:5.8.2" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.opentest4j:opentest4j:1.2.0" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.junit.platform:junit-platform-commons:1.8.2" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.apiguardian:apiguardian-api:1.1.2" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.junit.jupiter:junit-jupiter-engine:5.8.2" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.junit.platform:junit-platform-engine:1.8.2" level="project" />
+    <orderEntry type="library" name="Maven: io.sentry:sentry:5.6.3" level="project" />
   </component>
 </module>

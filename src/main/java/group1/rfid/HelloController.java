@@ -14,21 +14,29 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.chart.*;
 import javafx.scene.chart.XYChart.Series;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ProgressIndicator;
+import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseDragEvent;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
+import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.paint.ImagePattern;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
+import javafx.stage.FileChooser;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URL;
 import java.util.*;
@@ -38,6 +46,11 @@ import io.sentry.Sentry;
 import java.lang.Exception;
 
 public class HelloController implements Initializable {
+
+    @FXML
+    private Button importer;
+    @FXML
+    private VBox vlist;
     @FXML
     private Label labdash1;
     @FXML
@@ -68,6 +81,10 @@ public class HelloController implements Initializable {
     private ProgressIndicator prog1;
     @FXML
     private Label lab1;
+
+    private FileInputStream fis;
+    private FileChooser fileChooser;
+    private File file;
 //////////////////////////////////////initialize bar chart  //
     @FXML
     private BarChart<String,Number> barchart;
@@ -127,7 +144,10 @@ public class HelloController implements Initializable {
 
     @FXML
     private ImageView tv2;
-
+    @FXML
+    private HBox hboxline;
+    @FXML
+    private VBox vboxlist;
     private double xOffset = 0;
     private double yOffset = 0;
 
@@ -228,6 +248,10 @@ public class HelloController implements Initializable {
     public static void main(String[] args) {
 
     }
+    @FXML
+    private TextField browse;
+
+
 
     @FXML
     void mcha(MouseEvent event) {
@@ -265,12 +289,7 @@ public class HelloController implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
       //sentryCheck();
 
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
-
-
-
-
-
+/////////////////////////////////////////////////////////////////////load barchart
         Series series3 = new Series();
         series3.setName("2005");
         series3.getData().add(new XYChart.Data("la petit", 12));
@@ -278,9 +297,22 @@ public class HelloController implements Initializable {
         series3.getData().add(new XYChart.Data("la Grande", 9));
         series3.getData().add(new XYChart.Data("CP", 11));
         barchart.getData().addAll(series3);
+////////////////////////////////////////////////////////////////////////////////////
 
-
-
+//////////////////////////////////////////////////////////////////////////////// Load Listes parents/eleves
+List<user>users=new ArrayList<>(users());
+for(int i=0;i<users.size();i++){
+    FXMLLoader fxmlLoader = new FXMLLoader();
+    fxmlLoader.setLocation((getClass().getResource("bar.fxml")));
+try{
+    HBox hbox=fxmlLoader.load();
+    barController bc=fxmlLoader.getController();
+    bc.setData(users.get(i));
+    vlist.getChildren().add(hbox);
+} catch (IOException e) {
+    e.printStackTrace();
+}
+}
 
     }
 
@@ -319,7 +351,82 @@ elevepane.setVisible(true);
     }
 
     @FXML
-    void exitme(MouseEvent event) {
-Platform.exit();
+    void exitme(MouseEvent event) throws IOException {
+        Stage stage = new Stage();
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("login.fxml"));
+
+        Scene scene = new Scene(fxmlLoader.load(), 823, 485);
+        scene.getStylesheets().add(getClass().getResource("styleFX.css").toExternalForm());
+
+        stage.initStyle(StageStyle.UNDECORATED);
+        stage.setScene(scene);
+        stage.show();
+
+        scene.setOnMousePressed(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent event) {
+                xOffset = event.getSceneX();
+                yOffset = event.getSceneY();
+            }
+        });
+
+        // n7arko stage
+        scene.setOnMouseDragged(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent event) {
+                stage.setX(event.getScreenX() - xOffset);
+                stage.setY(event.getScreenY() - yOffset);
+            }
+        });
+
+        ((Node) event.getSource()).getScene().getWindow().hide();
     }
+
+    private List<user> users(){
+        List<user>ls=new ArrayList<>();
+        user us=new user();
+        user us1=new user();
+        user us2=new user();
+
+
+        us.setImgsrc("/imgeskidsparent/1.jpg");
+        us.setCode("12ED20CXS");
+        us.setAdresse("RUE A NO 04 AVENUE DES ABCD ");
+        us.setNom("Ahmed ABCD");
+        ls.add(us);
+
+        us1.setImgsrc("/imgeskidsparent/3.jpg");
+        us1.setCode("13EDZSE34");
+        us1.setAdresse("RUE EF NO 06 AVENUE DES EFGH ");
+        us1.setNom("Ali EFGH");
+        ls.add(us1);
+
+        us2.setImgsrc("/imgeskidsparent/6.jpg");
+        us2.setCode("16REDF343D");
+        us2.setAdresse("RUE NG NO 22 AVENUE DES KLMNO ");
+        us2.setNom("Mohammed kali");
+        ls.add(us2);
+
+        return ls;
     }
+
+    @FXML
+    void importexcel(MouseEvent event) throws FileNotFoundException {
+        System.out.println("T E S T ");
+    fileChooser = new FileChooser();
+    FileChooser.ExtensionFilter xlsxFilter = new
+            FileChooser.ExtensionFilter("XLSX files (*.xlsx)", "*.xlsx");
+    FileChooser.ExtensionFilter xlsFilter = new
+            FileChooser.ExtensionFilter("XLS files (*.xls)", "*.xls");
+
+
+        fileChooser.getExtensionFilters().addAll(xlsxFilter, xlsFilter);
+
+    //Show open file dialog
+    file = fileChooser.showOpenDialog(null);
+        if (file != null) {
+        browse.setText(file.getAbsolutePath());
+
+    }
+}}
+

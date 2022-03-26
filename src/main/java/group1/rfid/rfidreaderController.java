@@ -11,6 +11,7 @@ import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.concurrent.Task;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -93,10 +94,6 @@ public class rfidreaderController implements Initializable {
 
     Label mylabel= new Label();
 
-
-   // Image imagec2 = new Image("/img/CARD1.png", 200, 277, false, true);
-    //Image imagec3 = new Image("/img/CARD1.png", 200, 277, false, true);
-    //Image imagec4 = new Image("/img/CARD1.png", 200, 277, false, true);
    Image imagec1 = new Image(getClass().getResourceAsStream("/img/CARD1.png"), 200, 277, false, true);
     Image imagec2 = new Image(getClass().getResourceAsStream("/img/CARD2.png"), 200, 277, false, true);
     Image imagec3 = new Image(getClass().getResourceAsStream("/img/CARD3.png"), 200, 277, false, true);
@@ -127,11 +124,38 @@ public class rfidreaderController implements Initializable {
     private Stage stage;
     private Scene scene;
     private Parent root;
+    private double xOffset = 0;
+    private double yOffset = 0;
     ///////////////////////////////////////////////////////////////////////////////////////////////HIDE WINDOW
     @FXML
     void hideme(MouseEvent event) throws IOException {
-       /* Stage stage = (Stage) hide.getScene().getWindow();
-        stage.setIconified(true); */
+
+        Stage stage=new Stage();
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 1097, 591);
+        stage.initStyle(StageStyle.UNDECORATED);
+        stage.setScene(scene);
+        stage.show();
+
+        scene.setOnMousePressed(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent event) {
+                xOffset = event.getSceneX();
+                yOffset = event.getSceneY();
+            }
+        });
+
+        // n7arko stage
+        scene.setOnMouseDragged(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent event) {
+                stage.setX(event.getScreenX() - xOffset);
+                stage.setY(event.getScreenY() - yOffset);
+            }
+        });
+
+
+        ((Node) event.getSource()).getScene().getWindow().hide();
 
 
     }

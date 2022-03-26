@@ -17,6 +17,7 @@ import javafx.scene.paint.ImagePattern;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 import javafx.util.Duration;
 
 import java.io.*;
@@ -467,7 +468,8 @@ public class tvController {
 
     }
     @FXML
-    void closme(MouseEvent event) {
+    void closme(MouseEvent event) throws IOException {
+
         ((Node) event.getSource()).getScene().getWindow().hide();
 
     }
