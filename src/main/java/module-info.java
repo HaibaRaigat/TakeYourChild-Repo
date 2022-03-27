@@ -15,6 +15,7 @@ module group1.rfid {
     requires sentry;
 
 
+
     opens group1.rfid to javafx.fxml;
     exports group1.rfid;
 }

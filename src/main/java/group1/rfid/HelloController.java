@@ -41,6 +41,9 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.*;
 
+//apache POI
+
+
 // sentry imports
 import io.sentry.Sentry;
 import java.lang.Exception;
@@ -387,12 +390,18 @@ elevepane.setVisible(true);
         user us=new user();
         user us1=new user();
         user us2=new user();
-
-
+        user us4=new user();
+        user us5=new user();
         us.setImgsrc("/imgeskidsparent/1.jpg");
         us.setCode("12ED20CXS");
         us.setAdresse("RUE A NO 04 AVENUE DES ABCD ");
         us.setNom("Ahmed ABCD");
+        ls.add(us);
+
+        us5.setImgsrc("/imgeskidsparent/1.jpg");
+        us5.setCode("12ED20CXS");
+        us5.setAdresse("RUE A NO 04 AVENUED ");
+        us5.setNom("AHMAD EFGH");
         ls.add(us);
 
         us1.setImgsrc("/imgeskidsparent/3.jpg");
@@ -428,5 +437,6 @@ elevepane.setVisible(true);
         browse.setText(file.getAbsolutePath());
 
     }
+
 }}
 
