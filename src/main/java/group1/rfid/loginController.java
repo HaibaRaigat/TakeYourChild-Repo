@@ -63,15 +63,17 @@ public class loginController {
     private double yOffset = 0;
     @FXML
     void playvid(MouseEvent event) throws MalformedURLException {
-
+        System.out.println(System.getProperty("os.name"));
 play.setVisible(false);
         media.setVisible(true);
         logo.setVisible(false);
         smile.setVisible(false);
         welcome.setVisible(false);
         pause.setVisible(true);
+
         media1 = new Media(getClass().getResource("/img/intro.mp4").toExternalForm());
         mediaPlayer=new MediaPlayer(media1);
+        mediaPlayer.setMute(true);
         media.setMediaPlayer(mediaPlayer);
         mediaPlayer.play();
         mediaPlayer.setOnEndOfMedia(new Runnable() {

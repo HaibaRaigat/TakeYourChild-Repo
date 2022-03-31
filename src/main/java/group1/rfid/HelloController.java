@@ -95,7 +95,8 @@ public class HelloController implements Initializable {
     private CategoryAxis x;
     @FXML
     private NumberAxis y;
-
+    @FXML
+    private Circle imgprofile;
 /////////////////////////////////////////////////////////
 
     Image image1 = new Image(getClass().getResourceAsStream("/imgeskidsparent/2.jpg"));
@@ -291,6 +292,9 @@ public class HelloController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
       //sentryCheck();
+
+        Image image5 = new Image(getClass().getResourceAsStream("/imgeskidsparent/admin.png"));
+        imgprofile.setFill(new ImagePattern(image5));
 
 /////////////////////////////////////////////////////////////////////load barchart
         Series series3 = new Series();
