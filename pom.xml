@@ -7,25 +7,17 @@
     <artifactId>RFID</artifactId>
     <version>1.0-SNAPSHOT</version>
     <name>RFID</name>
-
-
-
-
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <junit.version>5.8.2</junit.version>
     </properties>
-
     <dependencies>
-
-
         <!-- https://mvnrepository.com/artifact/org.openjfx/javafx-swing -->
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-swing</artifactId>
             <version>17.0.2</version>
         </dependency>
-
         <!-- https://mvnrepository.com/artifact/com.google.zxing/core -->
         <dependency>
             <groupId>com.google.zxing</groupId>
