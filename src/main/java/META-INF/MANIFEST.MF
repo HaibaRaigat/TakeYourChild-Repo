@@ -1,3 +1,3 @@
 Manifest-Version: 1.0
-Main-Class: group1.rfid.HelloApplication
+Main-Class: group1.rfid.main
 
